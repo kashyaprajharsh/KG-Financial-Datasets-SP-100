@@ -136,7 +136,7 @@ Interactive knowledge graph visualizations that allow exploration of:
 - Automatic dropping of low-value or incorrect triplets  
 - Individual triplet correction using targeted prompts
 
-## � Company Coverage
+## Company Coverage
 
 The dataset includes 101 S&P 100 companies as of 2024, covering major sectors:
 
