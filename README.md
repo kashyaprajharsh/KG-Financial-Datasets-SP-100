@@ -2,6 +2,8 @@
 
 A comprehensive knowledge graph dataset extracted from S&P 100 companies' 10-K filings for 2024, processed using the Qwen2.5-72B-Instruct model with three different extraction methodologies.
 
+> **🚀 Quick Start**: Download the [compressed dataset (90MB)] and extract to get started immediately!
+
 ## 📊 Dataset Overview
 
 This dataset contains structured knowledge graphs extracted from 101 S&P 100 companies' SEC 10-K filings for the year 2024. The knowledge graphs are represented as triplets (subject-relation-object) with entity types and extracted using three different LLM-based methodologies.
@@ -298,8 +300,54 @@ This dataset is suitable for various research applications:
 
 - **Total JSON Files**: 303 (101 companies × 3 methods)
 - **Total HTML Files**: 303 (interactive visualizations)
-- **Average Triplets per Company**: ~50-200 (varies by method and company)
-- **Total Estimated Triplets**: ~15,000-30,000 across all companies and methods
-- **File Size Range**: 200KB - 2MB per JSON file
+- **Companies Successfully Processed**: 101 S&P 100 companies
+- **Average Triplets per File**: ~1,956 triplets (varies by method)
+  - Single-pass: ~1,867 triplets per company
+  - Multi-pass: ~1,752 triplets per company  
+  - Reflection: ~2,251 triplets per company
+- **Total Estimated Triplets**: ~592,668 triplets across all files
+- **Average File Size**: ~555KB per JSON file
+- **File Size Range**: 525KB - 593KB per JSON file
+- **Total Dataset Size**: 687MB uncompressed, 90MB compressed (tar.gz)
+
+## 🛠️ Installation & Setup
 
 
+### Quick Download & Extract
+```bash
+# Download the compressed dataset
+
+tar -xzf financial_kg_sp100_2024_qwen.tar.gz
+cd Qwen2.5-72B-Instruct
+```
+
+## 🎯 Quality Metrics & Validation
+
+### Extraction Quality
+- **Success Rate**: 100% (303/303 files successfully processed)
+- **Entity Coverage**: 24 distinct entity types with balanced distribution
+- **Relationship Coverage**: 27 relationship types covering business, financial, and regulatory domains
+- **Triplet Quality**: Reflection method shows highest triplet count and quality
+
+### Data Validation
+- ✅ All JSON files are valid and parseable
+- ✅ Consistent schema across all files
+- ✅ No missing required fields
+- ✅ Entity types conform to predefined taxonomy
+- ✅ Relationship types conform to predefined taxonomy
+
+## ⚖️ Ethics
+
+### Ethical Considerations
+- **Data Source**: All data is derived from publicly available SEC 10-K filings
+- **Privacy**: No personal information beyond publicly disclosed executive names
+- **Bias**: Dataset reflects information as reported by companies; may contain reporting biases
+- **Usage Guidelines**: Intended for research and educational purposes
+
+### Disclaimer
+This dataset is for research purposes only. Financial decisions should not be made based solely on this data. Always consult official SEC filings and professional financial advice.
+
+
+
+
+**Last Updated**: January 2025 | **Version**: 1.0 | **Status**: Active
